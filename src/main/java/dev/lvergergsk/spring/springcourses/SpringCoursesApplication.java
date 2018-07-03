@@ -2,8 +2,8 @@ package dev.lvergergsk.spring.springcourses;
 
 import dev.lvergergsk.spring.springcourses.aop.business.Business1;
 import dev.lvergergsk.spring.springcourses.aop.business.Business2;
-import dev.lvergergsk.spring.springcourses.jdbc.PersonJdbcDao;
 import dev.lvergergsk.spring.springcourses.entity.Person;
+import dev.lvergergsk.spring.springcourses.jdbc.PersonJdbcDao;
 import dev.lvergergsk.spring.springcourses.jpa.PersonJpaRepository;
 import dev.lvergergsk.spring.springcourses.springdata.PersonSpringDataRepository;
 import org.slf4j.Logger;
@@ -13,9 +13,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
+import org.springframework.web.servlet.LocaleResolver;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Locale;
 
 @SpringBootApplication
 public class SpringCoursesApplication implements CommandLineRunner {
@@ -72,4 +78,20 @@ public class SpringCoursesApplication implements CommandLineRunner {
         LOGGER.info(business2.calculateSomething());
 
     }
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
+        localeResolver.setDefaultLocale(Locale.US);
+        return localeResolver;
+    }
+
+//    @Bean
+//    public ResourceBundleMessageSource messageSource() {
+//        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+//        messageSource.setBasename("messages");
+//        return messageSource;
+//    }
 }
+
+//https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Security-2.0#changing-the-username-and-password

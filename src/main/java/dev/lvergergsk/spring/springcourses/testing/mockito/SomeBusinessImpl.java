@@ -7,12 +7,13 @@ public class SomeBusinessImpl {
 
     public SomeBusinessImpl(DataService dataService) {
         super();
-        this.dataService=dataService;
+        this.dataService = dataService;
     }
 
     int findTheGreatestFromAllData() {
         int[] data = dataService.retrieveAllData();
         return Arrays.stream(data).max().orElse(Integer.MIN_VALUE);
     }
+
 }
 
