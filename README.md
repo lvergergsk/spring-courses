@@ -54,8 +54,24 @@ Hyper-media as the engine of application state.
 
 #### TODO:
 Example for:
-- @Bean
+- @MockBean !!
 - @Profile
 - @Conditional
+- @Transactional
+- @Type
+- @scheduled
+- @Data
+- @ConfigurationProperties(prefix = "...")
+- @Target
+- @Slf4j
+- @AllArgsConstructor
+- @Convert
 
-
+#### Others:
+- URL wildcard 
+- MockMvc
+- MockMvcBuilder
+- spring   .data.domain.sort
+- spring   .data.domain.sort.direction
+- spring   .data.domain.Pageable
+- lombok.Data

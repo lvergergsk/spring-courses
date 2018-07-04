@@ -8,7 +8,9 @@ public class SomeBusinessImplTest {
 
     @Test
     public void calculateSum_basic(){
-        fail("not yet implemented");
+        SomeBusinessImpl business=new SomeBusinessImpl();
+        int expected=business.calculateSum(new int[]{1,2,3});
+        assertEquals(6,expected);
     }
 
 }
