@@ -15,10 +15,11 @@
   - @DeleteMapping
 - @PathVariable
 - @RequestBody
+- @Validated
 - @ControllerAdvice
 - @JsonIgnoreProperty(value={"...","...",...})
 - @JsonIgnore
-- @JsonFilter
+- @JsonFilter("...")
 - @ManyToOne
 - @OneToMany
 - @OneToOne
@@ -64,8 +65,21 @@ Example for:
 - @ConfigurationProperties(prefix = "...")
 - @Target
 - @Slf4j
+- @NoArgConstructor
 - @AllArgsConstructor
 - @Convert
+- @AutoConfigureTestDatabase(replace = Replace.None
+- @DataJpaTest
+- @ExtendWith(SpringExtension.class)
+- @ActiveProfile("...")
+- @JsonProperty
+- @JsonFormat
+- @Target(ElementType.Field)
+- @Retention(retentionPolicy.RUNTIME)
+- @Documented
+- @MappedSuperclass
+- @ToString(exclude = {"...","..."})
+
 
 #### Others:
 - URL wildcard 
@@ -75,3 +89,17 @@ Example for:
 - spring   .data.domain.sort.direction
 - spring   .data.domain.Pageable
 - lombok.Data
+- Data Transfer Object
+- java.util.concurrent.Callable
+- BeanWrapper
+- PropertyAccessorFactory.forBeanPropertyAccess(...)
+- java.beans.PropertyDescriptor
+- import java.util.Timer;
+- import java.util.TimerTask;
+- How to create customized annotation
+- Scope protected
+- mockito.Mockito.spy
+- MockRestServiceServer.bindTo(....getRestTemplate).build() (spring)
+- Mockito.doReturn
+- JPA Optimistic Lock & jpa pessimistic lock
+- ObjectMapper.readValue(json,dto[].class)
