@@ -79,7 +79,16 @@ Example for:
 - @Documented
 - @MappedSuperclass
 - @ToString(exclude = {"...","..."})
-
+- @PrePersist
+- @LastModifiedDate
+- @Version
+- @CreatedDate
+- @InjectMocks
+- @Spy
+- @DataJpaTest
+- @Import
+- @Getter
+- @Setter
 
 #### Others:
 - URL wildcard 
@@ -103,3 +112,5 @@ Example for:
 - Mockito.doReturn
 - JPA Optimistic Lock & jpa pessimistic lock
 - ObjectMapper.readValue(json,dto[].class)
+- SoftAssertions (assertj)
+- javax.crypto.Cipher
