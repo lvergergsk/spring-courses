@@ -114,3 +114,6 @@ Example for:
 - ObjectMapper.readValue(json,dto[].class)
 - SoftAssertions (assertj)
 - javax.crypto.Cipher
+- RestTemplate.postForEntity
+- RestTemplate.getForEntity
+
